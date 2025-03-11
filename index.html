@@ -30,6 +30,7 @@
       <div class="row">
         <div class="col-12">
           <h1 id="name">¡Nos casamos!</h1>
+            <p id="countdown"></p>
           <p data-i18n="index_p1">Esta página esta un poco vacía ahora, pero más adelante seguro que añadimos cosas interesantes ;)</p>
           <img src="res/wip.png">
         </div>
@@ -38,6 +39,20 @@
     </div>
   </div>
 </section>
+  
+  
+  
+  <script>
+  function calculateDaysLeft() {
+    const weddingDate = new Date('2025-08-10');
+    const today = new Date();
+    const timeDifference = weddingDate - today;
+    const daysLeft = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+    return daysLeft;
+  }
+
+  document.getElementById('countdown').innerText = `Faltan ${calculateDaysLeft()} días para nuestra boda.`;
+</script>
   </body>
   
 

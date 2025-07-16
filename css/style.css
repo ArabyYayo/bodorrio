@@ -1,0 +1,134 @@
+:root {
+  /*
+  --primary-color: #ec496e;
+  --secondary-color: #f9850f;
+  --tertiary-color: #8fb800;
+  --quaternary-color: #2fcea5;
+  --background-color: #f8f9fa;
+  --secondary-background-color: #ffffff;
+  --text-color: #343a40;
+  --link-active-color: #007bff;
+*/
+  --primary-color: #0056b3; /* Azul vibrante */
+  --secondary-color: #003d80; /* Azul suave */
+  --tertiary-color: #4caf50; /* Verde fresco */
+  --quaternary-color: #ff9800; /* Naranja cálido */
+
+  --background-color: #f9f9f9; /* Blanco suave */
+  --secondary-background-color: #e0e0e0; /* Gris claro */
+  --text-color: #212529; /* Gris oscuro */
+  --link-active-color: #007bff; /* Azul brillante para enlaces activos */
+}
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.bigContainer {
+  padding: 20px;
+}
+
+/* Jumbotron Styles */
+.jumbotron {
+  background-color: var(--secondary-background-color);
+  padding: 2rem 1rem;
+  margin: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, var(--primary-color),  var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border: 20px, black;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  background:  linear-gradient(to right,var(--primary-color), var(--tertiary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+ p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.jumbotron img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 12px;
+/*transition: transform 2.0s ease-in-out; ;*/
+}
+
+#intro > .jumbotron img {
+  width: 50%;
+  height: auto;
+}
+
+/* Navbar */
+
+#navbar {
+  background: linear-gradient(to bottom, var(--secondary-background-color), var(--background-color));
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+
+.nav-link.active {
+  font-weight: bold;
+  color: var(--link-active-color);
+}
+
+
+/* Icono hamburguesa Bootstrap 4 */
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Responsive Styles */
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 4rem 2rem;
+  }
+
+  .jumbotron h1 {
+    font-size: 3rem;
+  }
+
+  .jumbotron p {
+    font-size: 1.5rem;
+  }
+  }
+
+  #intro img {
+  width: 50%;
+  height: auto;
+}

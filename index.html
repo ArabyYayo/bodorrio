@@ -1,59 +1,208 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--JQuery-->
+  <script src="js/jquery-3.4.1.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap-4.4.1.js"></script>
+  <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- CSS -->
+  <link href="css/style.css" rel="stylesheet">
 
 
 
-<!-- Bootstrap -->
-<script src="js/popper.min.js"></script> 
-<script src="js/bootstrap-4.4.1.js"></script> 
-<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
 
-
-<!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-  
-<title>Araceli y Pelayo</title>
-<link rel="icon" href="images/icon.ico">
+  <title>Araceli y Pelayo</title>
+  <link rel="icon" href="res/logo.ico">
 </head>
-  
-  
-  
+
+
+
 <body>
-<section>
-  <div class="bigContainer">
-  <div class="jumbotron text-center mt-2">
+
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1 id="name">¡Nos casamos!</h1>
-            <p id="countdown"></p>
-          <p data-i18n="index_p1">Esta página esta un poco vacía ahora, pero más adelante seguro que añadimos cosas interesantes ;)</p>
-          <img src="res/wip.png">
+      <a class="navbar-brand" href="#" id="navbar-title">Ara y Pelayo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a id="nav-location" class="btn btn-link nav-link" onclick="goto('location')">El sitio</a>
+          </li>
+          <li class="nav-item">
+            <a id="nav-planning" class="btn btn-link nav-link" onclick="goto('planning')">Programa</a>
+          </li>
+          <li class="nav-item">
+            <a id="nav-tributes" class="btn btn-link nav-link" onclick="goto('tributes')">Regalos</a>
+          </li>
+          <li class="nav-item">
+            <a id="nav-photos" class="btn btn-link nav-link" onclick="goto('photos')">Fotos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Intro -->
+  <section>
+    <div class="bigContainer" id="intro">
+
+      <!-- Intro Pre -->
+      <div class="jumbotron text-center mt-2">
+        <div class="container" id="intro-pre">
+          <div class="row">
+            <div class="col-12">
+              <h1 id="name">¡Nos casamos!</h1>
+              <p id="countdown">¡Os esperamos el día 10 de agosto!</p>
+              <img src="res/intro_pre.png">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Intro Day -->
+      <div class="jumbotron text-center mt-2" id="intro-day">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1 id="name">¡Nos casamos!</h1>
+              <p>¡Ay madre, ay madre! ¡Que es el día! ¡Que viene!</p>
+              <img src="res/wip.png">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Intro Post -->
+      <div class="jumbotron text-center mt-2" id="intro-post">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1 id="name">¡Nos hemos casado!</h1>
+              <p>Muchísimas gracias a todos por venir. Sois los mejores..</p>
+              <img src="res/intro_post.png">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- El sitio -->
+  <section>
+    <div class="bigContainer" id="location">
+      <div class="jumbotron text-center mt-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>El sitio</h1>
+              <p>Nos casamos en el  <b>Castillo de San Cucao</b>, en Llanera, Asturias, a las <b>13:00 h.</b></p>
+              <p>Dirección:</p>
+              <p><strong>Carretera de San Cucao, s/n, 33424 Llanera, Asturias</strong></p>
+              <p>Si lo prefieres, puedes utilizar este enlace a Google Maps:</p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1722.8858249715888!2d-5.87799548961874!3d43.42849885642601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd368e6abf7ccacd%3A0xca13eb98dc3e8639!2sRestaurante%20Castillo%20de%20San%20Cucao!5e0!3m2!1ses!2ses!4v1751127671883!5m2!1ses!2ses"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <p>Como la ocasión lo merece y vamos a celebrarlo a lo grande, habilitaremos un autobús desde Oviedo, para facilitar tanto la llegada como la vuelta.</p>
+              <p>La salida será a las <b>12:30</b> desde la parada de autobús situada en la calle Fernando Vela.</p>
+              <p>La hora de regreso está aún por confirmar. Actualizaremos esta página en cuanto esté decidida.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    </div>
-  </div>
-</section>
-  
-  
-  
-  <script>
-  function calculateDaysLeft() {
-    const weddingDate = new Date('2025-08-10');
-    const today = new Date();
-    const timeDifference = weddingDate - today;
-    const daysLeft = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-    return daysLeft;
-  }
+  </section>
 
-  document.getElementById('countdown').innerText = `Faltan ${calculateDaysLeft()} días para nuestra boda.`;
-</script>
-  </body>
-  
+  <!-- Programa -->
+  <section>
+    <div class="bigContainer" id="planning">
+      <div class="jumbotron text-center mt-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>Programa</h1>
+              <img class="d-block w-100" src="res/timeline.png" alt="timeline">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regalos -->
+  <section>
+    <div class="bigContainer" id="tributes">
+      <div class="jumbotron text-center mt-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>Regalos</h1>
+              <p>Vuestra presencia es el mejor regalo que podemos recibir y, de verdad, es lo que más ilusión nos hace. Sabemos que hay personas que no se encuentran cómodas con esto, pero no tenemos lista de regalos ni nada por el estilo. No queremos que nadie se sienta más incómodo que los propios novios, así que, si realmente os vais a quedar más tranquilos, podéis hacernos el regalo en mano o por Bizum, a cualquiera de los dos.</p>
+              <p>Repetimos, de corazón: <b>vuestra compañía es lo único que realmente deseamos.</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fotos -->
+  <section>
+    <div class="bigContainer" id="photos">
+      <div class="jumbotron text-center mt-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>Fotos</h1>
+              <p>Como vivimos en el futuro contamos con un sistema de fotos en la nube, que permite a los invitados y fotógrafos subir vídeos y fotos, para que los asistentes puedan verlos y descargarlos. Además, incluye una especie de libro de visitas virtual en el que podéis dejarnos mensajes que sean solo para nosotros.</p>
+              <a href="https://my.guestpix.com/Guest/Access/109219/N7P7xu1z" class="btn btn-primary">Acceder al álbum</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </html>
